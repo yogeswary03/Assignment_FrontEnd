@@ -7,7 +7,7 @@ function Delete() {
 
   const handleDelete = async () => {
     try {
-      const resp = await axios.delete(`http://localhost:3000/employees/${id}`);
+      const resp = await axios.delete(`https://assignment-backend-1-5g8g.onrender.com/employees/${id}`);
       setMsg(resp.data.msg);
     } catch (e) {
       setMsg("Error deleting employee");
