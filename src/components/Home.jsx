@@ -1,0 +1,36 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+function Home() {
+  const [data, setData] = useState(null);
+
+  const handleGet = async () => {
+    try {
+      const resp = await axios.get("http://localhost:3000/employees");
+      setData(resp.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    handleGet();
+  }, []);
+
+  return (
+    <>
+      <h1>Employee List</h1>
+      {data ? (
+        data.map((d) => (
+          <h3 key={d.id}>
+            ID: {d.id} — {d.name} | {d.department} | {d.designation} | ₹{d.salary}
+          </h3>
+        ))
+      ) : (
+        <h3>No data loaded</h3>
+      )}
+    </>
+  );
+}
+
+export default Home;
