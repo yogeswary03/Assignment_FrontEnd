@@ -25,7 +25,7 @@ function Add() {
     <>
       <h1>Add New Employee</h1>
       <input
-        type="text"
+        type="number"
         placeholder="ID"
         value={employee.id}
         onChange={(e) => setEmployee({ ...employee, id: e.target.value })}

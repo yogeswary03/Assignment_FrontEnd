@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Home() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   const handleGet = async () => {
     try {
@@ -20,14 +20,14 @@ function Home() {
   return (
     <>
       <h1>Employee List</h1>
-      {data ? (
+      {data.length > 0 ? (
         data.map((d) => (
           <h3 key={d.id}>
             ID: {d.id} — {d.name} | {d.department} | {d.designation} | ₹{d.salary}
           </h3>
         ))
       ) : (
-        <h3>No data loaded</h3>
+        <h3>No employees found</h3>
       )}
     </>
   );

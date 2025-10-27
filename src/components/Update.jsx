@@ -28,7 +28,7 @@ function Update() {
     <>
       <h1>Update Employee</h1>
       <input
-        type="text"
+        type="number"
         placeholder="Employee ID"
         value={employee.id}
         onChange={(e) => setEmployee({ ...employee, id: e.target.value })}

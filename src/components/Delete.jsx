@@ -19,7 +19,7 @@ function Delete() {
     <>
       <h1>Delete Employee</h1>
       <input
-        type="text"
+        type="number"
         placeholder="Employee ID"
         value={id}
         onChange={(e) => setId(e.target.value)}
