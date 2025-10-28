@@ -6,7 +6,7 @@ function Home() {
 
   const handleGet = async () => {
     try {
-      const resp = await axios.get("https://assignment-backend-1-5g8g.onrender.com/employees");
+      const resp = await axios.get("https://assignment-backend-3-sp1e.onrender.com/employees");
       setData(resp.data);
     } catch (e) {
       console.log(e);

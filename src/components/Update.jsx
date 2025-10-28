@@ -14,7 +14,7 @@ function Update() {
   const handlePut = async () => {
     try {
       const resp = await axios.put(
-        `https://assignment-backend-1-5g8g.onrender.com/employees/${employee.id}`,
+        `https://assignment-backend-3-sp1e.onrender.com/employees/${employee.id}`,
         employee
       );
       setMsg(resp.data.msg);

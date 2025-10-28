@@ -13,7 +13,7 @@ function Add() {
 
   const handlePost = async () => {
     try {
-      const resp = await axios.post("https://assignment-backend-1-5g8g.onrender.com/employees", employee);
+      const resp = await axios.post("https://assignment-backend-3-sp1e.onrender.com/employees", employee);
       setMsg(resp.data.msg);
     } catch (e) {
       setMsg("Error adding employee");
